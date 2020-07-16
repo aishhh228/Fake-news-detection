@@ -1,0 +1,35 @@
+<html>
+<head>
+<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<br><br><br><br><br>
+
+<body style= "background:#d0d0e1">
+
+<header>
+<div class="container" align='center'>
+<div id="brandname" align='center'>
+ <font color="#666699">
+Machine Learning based App
+</font>
+</div>
+<h2><font color="#666699" face="Lucida Bright" size="11">Fake News Detection</font></h2>
+
+</div>
+</header>
+<p style="color:#666699; font-size:20; text-align: center;"><b>The News is:</b></p>
+<div class="results">
+
+
+
+{% if prediction == 1%}
+<h2 style="color:red;" align='center' face="Lucida Bright">FAKE</h2>
+{% elif prediction == 0%}
+<h2 style="color:blue;" align='center' face="Lucida Bright">REAL</h2>
+{% endif %}
+
+</div>
+
+</body>
+</html>

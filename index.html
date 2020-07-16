@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Home</title>
+<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<br><br><br><br><br>
+<body style= "background:#d0d0e1">
+
+<header>
+<div class="container"  align='center'>
+<div id="brandname"  align='center'>
+<font color="#666699">
+Machine Learning based App
+</font>
+</div>
+<h2><font color="#666699" face="Lucida Bright" size="11">Fake News Detection</font></h2>
+
+</div>
+</header>
+
+<div class="ml-container" align='center' >
+
+<form action="{{ url_for('predict')}}" method="POST">
+<p align='center' ><font color="#666699" face="Lucida Bright" size="4">Enter Your Text Here </font></p>
+<!-- <input type="text" name="comment"/> -->
+<textarea name="text" rows="6" cols="50" align='center'></textarea>
+<br/>
+
+<input type="submit" class="btn-info" value="predict" align='center' style="width: 10%; height: 50px">
+
+</form>
+
+</div>
+
+</body>
+</html>
+
